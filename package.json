@@ -14,6 +14,6 @@
     "ffmpeg": "0.0.4",
     "opusscript": "0.0.7",
     "ytdl-core": "^1.0.9",
-    "ytdl-core-discord": "amishshah/ytdl-core-discord"
+    "ytdl-core-discord": "^1.1.0"
   }
 }
