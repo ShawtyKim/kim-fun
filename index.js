@@ -4,9 +4,13 @@ const { readdirSync } = require('fs');
 const { join } = require('path');
 const MusicClient = require('./struct/Client');
 const { Collection } = require('discord.js');
+<<<<<<< HEAD
 const client = new MusicClient({ token: process.env.token , prefix: process.env.DISCORD_PREFIX });
 
 const token = 'Njc5MzQ3MTg2MTg5OTkxOTM3.XkwHRg.5gholLW0o53hf3hkn3FCqY_w2Nw';
+=======
+const client = new MusicClient({ token: process.env.token, prefix: process.env.DISCORD_PREFIX });
+>>>>>>> 5e58feb959872b08187dfb96334d8eebb189a419
 
 const commandFiles = readdirSync(join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
@@ -51,4 +55,4 @@ client.on('message', message => {
 	}
 });
 
-client.login(client.config.token);
+client.login(process.env.token);
