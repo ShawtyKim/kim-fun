@@ -1,9 +1,12 @@
 require('dotenv').config();
+const Discord = require('discord.js');
 const { readdirSync } = require('fs');
 const { join } = require('path');
 const MusicClient = require('./struct/Client');
 const { Collection } = require('discord.js');
-const client = new MusicClient({ token: process.env.DISCORD_TOKEN, prefix: process.env.DISCORD_PREFIX });
+const client = new MusicClient({ token: process.env.token , prefix: process.env.DISCORD_PREFIX });
+
+const token = 'Njc5MzQ3MTg2MTg5OTkxOTM3.XkwHRg.5gholLW0o53hf3hkn3FCqY_w2Nw';
 
 const commandFiles = readdirSync(join(__dirname, 'commands')).filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
